@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(){
+    int Num;
+    printf("Enter the number to find the number of digits in number: ");
+    scanf("%d", &Num);
+    int count = 0;
+    while(Num != 0){
+        Num = Num / 10;
+        count++;
+    }
+    printf("The number of digits in given number is: %d\n", count);
+    return 0;
+}
