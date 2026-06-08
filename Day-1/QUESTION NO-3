@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(){
+    int n;
+    printf("Enter the number to find the factorial: ");
+    scanf("%d", &n);
+    int i;
+    long long factorial = 1;
+    for(i=1; i<=n; i++){
+        factorial =  factorial * i;
+    }
+    printf("The factorial of %d is: %lld\n", n, factorial);
+    return 0;
+}
