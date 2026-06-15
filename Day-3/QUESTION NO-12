@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    int Num1, Num2, LCM;
+    printf("Enter two numbers to find LCM: ");
+    scanf("%d %d", &Num1, &Num2);
+    LCM = (Num1 > Num2) ? Num1 : Num2;
+    while(1){
+        if(LCM % Num1 == 0 && LCM % Num2 == 0){
+            printf("LCM of %d and %d is %d\n", Num1, Num2, LCM);
+            break;
+        }
+        LCM++;
+    }
+    return 0;
+}
