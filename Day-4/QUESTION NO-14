@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+    int num;
+    printf("Enter the number to find nth Fibonacci term: ");
+    scanf("%d", &num);
+    int a=0, b=1, next;
+    if (num == 0) {
+        printf("The 0th term of the Fibonacci series is: %d", a);
+    } else if (num == 1) {
+        printf("The 1st term of the Fibonacci series is: %d", b);
+    } else {
+        for (int i = 2; i <= num; i++) {
+            next = a + b;
+            a = b;
+            b = next;
+        }
+        printf("The %dth term of the Fibonacci series is: %d", num, next);
+    }
+
+}
