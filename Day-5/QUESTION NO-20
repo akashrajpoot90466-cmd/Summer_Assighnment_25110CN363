@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number to find its largest prime factor: ");
+    scanf("%d", &num);
+    int largestPrime = -1;
+    for (int i = 2; i <= num; i++) {
+        while (num % i == 0) {
+            largestPrime = i;
+            num /= i;
+        }
+    }
+    printf("The largest prime factor of the given number is: %d\n", largestPrime);
+    return 0;
+}
