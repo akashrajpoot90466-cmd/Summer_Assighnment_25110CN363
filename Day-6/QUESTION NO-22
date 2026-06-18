@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int Num;
+    printf("Enter a binary number to convert in to decimal: ");
+    scanf("%d", &Num);
+    int decimal = 0, base = 1, temp = Num;
+    while (temp)
+    {
+        int last_digit = temp % 10;
+        temp = temp / 10;
+        decimal += last_digit * base;
+        base = base * 2;
+    }
+    printf("Decimal number of %d is: %d\n", Num, decimal);
+    return 0;
+}
