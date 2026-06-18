@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+    int Num;
+    printf("Enter a decimal number to convert in to binary: ");
+    scanf("%d", &Num);
+    printf("Binary number of %d is: ", Num);
+    while (Num > 0)
+    {
+        printf("%d", Num % 2);
+        Num = Num / 2;
+    }
+    printf("\n");
+    return 0;
+}
