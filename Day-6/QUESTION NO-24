@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int Num;
+    printf("Enter a number to count bits in it: ");
+    scanf("%d", &Num);
+    int count = 0;
+    while (Num)
+    {
+        count += Num & 1;
+        Num >>= 1;
+    }
+    printf("Number of bits in the given number is: %d\n", count);
+    return 0;
+
+}
